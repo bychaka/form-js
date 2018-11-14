@@ -1,0 +1,62 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.form{
+    padding: 15px;
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input, .select{
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    padding: 5px 15px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.label{
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.form-btn{
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    padding: 5px 15px;
+}
+
+
+.hide{
+    display: none;
+}
+
+.active{
+    display: initial;
+}
+
+.error-item{
+    color: red;
+}
+
+.err{
+    border-color: red;
+}
+
+.star::after{
+    position: absolute;
+    left: -15px; 
+    top: -35px;
+    content: '*';
+    color: red;
+    vertical-align: super;
+    height: 10px;
+}
