@@ -1,8 +1,6 @@
 .main{
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
 }
 
 .form{
@@ -22,18 +20,52 @@
     box-sizing: border-box;
 }
 
+.input-control{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.star::after{
+    position: absolute;
+    left: -15px; 
+    top: -35px;
+    content: '*';
+    color: red;
+    vertical-align: super;
+    height: 10px;
+}
+
 .label{
     font-size: 18px;
     line-height: 30px;
 }
 
-.form-btn{
-    height: 40px;
-    font-size: 20px;
-    line-height: 40px;
-    padding: 5px 15px;
+.control-btn{
+    display: flex;
+    justify-content: space-around;
 }
 
+.form-btn{
+    font-size: 20px;
+    line-height: 40px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    
+}
+
+.reset {
+    background-color: #ff9999;
+}
+
+.submit{
+    background-color: #c5ffa8;
+}
+
+
+.select{
+    margin-bottom: 20px;
+}
 
 .hide{
     display: none;
@@ -51,12 +83,3 @@
     border-color: red;
 }
 
-.star::after{
-    position: absolute;
-    left: -15px; 
-    top: -35px;
-    content: '*';
-    color: red;
-    vertical-align: super;
-    height: 10px;
-}

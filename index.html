@@ -11,27 +11,36 @@
 <body class="main">
     <form class="form" action="#">
         <ul class="result"></ul>
+
+        <div class="input-control">
             <label class="label" for="user name">user name</label>
-        <input id="user-name" name="user name" class="form-input" type="text" pattern="[a-zA-Z]" required >
-
+            <input id="user-name" name="user name" class="form-input" type="text" pattern="[a-zA-Z]" required >
+        </div>
+        
+        <div class="input-control">
             <label class="label"  for="mail">e-mail</label>
-        <input id="e-mail" name="mail" class="form-input" type="email" pattern="[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}" required>
-
+            <input id="e-mail" name="mail" class="form-input" type="email" pattern="[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}" required>
+        </div>
+        
+        <div class="input-control">
             <label class="label"  for="pass"> password</label>
-        <input id="password" name="pass" class="form-input" type="password" pattern="[a-zA-Z0-9]{8,12}" required>
+            <input id="password" name="pass" class="form-input" type="password" pattern="[a-zA-Z0-9]{8,12}" required>
+        </div>
 
+        <div class="input-control">
             <label class="label"  for="confirm">repeat password</label>
-        <input id="confirm" name="confirm" class="form-input" type="password">
+            <input id="confirm" name="confirm" class="form-input" type="password">
+        </div>
 
-            <label class="label"  for="gender">gender</label>
+        <label class="label"  for="gender">gender</label>
         <select class="select" name="gender" id="gender">
             <option value="male">male</option>
             <option value="female">female</option>
         </select>
 
         <div class="control-btn">
-            <input id="reset" class="form-btn" type="reset" value="Cancel">
-            <input id="submit" class="form-btn" type="button" value="Ok">
+            <input id="reset" class="form-btn reset" type="reset" value="Reset">
+            <input id="submit" class="form-btn submit" type="button" value="Submit">
         </div>
     </form>
 </body>

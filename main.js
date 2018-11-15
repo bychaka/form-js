@@ -18,34 +18,42 @@ function validateForm(){
 }
 
 function validateInput(input){
-    console.info(input);
-    
     input.classList.remove('err');
-    let errorArr = document.querySelector('.result');
     
-    if (!isFieldFill(input)){
-        let errorItem = document.createElement('li');
-        errorItem.className = 'error-item';
-        errorItem.textContent = 'field "' + input.name + '" is not required!';
-        input.classList.add('err');
-        errorArr.appendChild(errorItem);
+    if (!isRequiredField(input)){
+        createErrorRequired(input);
     } else {
-        if (input.hasAttribute('pattern')) {
+        if (isFieldPattern(input)) {
             var pattern = input.getAttribute('pattern');
             var reg = new RegExp(pattern);
             if (!reg.test(input.value.toUpperCase())) { 
-            
-                let errorItem = document.createElement('li');
-                errorItem.className = 'error-item';
-                errorItem.textContent = 'field "' + input.name + '" is not validate';
-                input.classList.add('err');
-                errorArr.appendChild(errorItem);
+                createErrorPattern(input);
             } 
           }
     }
 }
 
-function isFieldFill(input){
+function createErrorPattern(input){
+    let errorItem = document.createElement('li');
+    errorItem.className = 'error-item';
+    errorItem.textContent = 'field "' + input.name + '" is not validated!';
+    input.classList.add('err');
+    document.querySelector('.result').appendChild(errorItem);
+}
+
+function createErrorRequired(input){
+    let errorItem = document.createElement('li');
+    errorItem.className = 'error-item';
+    errorItem.textContent = 'field "' + input.name + '" is required!';
+    input.classList.add('err');
+    document.querySelector('.result').appendChild(errorItem);
+}
+
+function isFieldPattern(input){
+    return (input.hasAttribute('pattern'))
+}
+
+function isRequiredField(input){
     return ((input.hasAttribute('required')) && (input.value.length > 0))
 }
 
