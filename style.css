@@ -6,6 +6,7 @@
 .form{
     padding: 15px;
     position: relative;
+    width: 300px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -26,10 +27,10 @@
     position: relative;
 }
 
-.star::after{
+.error-star::after{
     position: absolute;
     left: -15px; 
-    top: -35px;
+    top: 5px;
     content: '*';
     color: red;
     vertical-align: super;
